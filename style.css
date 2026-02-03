@@ -1,0 +1,546 @@
+*{
+    margin: 0;
+}
+/*
+
+.main2{
+    visibility: visible !important;
+}
+.login, .bg{
+    display: none !important;
+}
+.bg2{
+    width: 100% !important;
+    visibility: visible !important;
+}
+.cake{
+    scale: 100% !important;
+}
+*/
+
+#img2{
+  position: absolute;
+  scale: 50%;
+  top: -200px;
+  left: 200px;
+  rotate: -25deg;
+}
+
+#img3{
+  position: absolute;
+  scale: 45%;
+  top: 350px;
+  right: 350px;
+}
+
+.bg, .bg2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -5;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+}
+
+/* Login */
+
+.form{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    padding: 150px 80px;
+    margin-right: 10%;
+    border-radius: 50px;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+    scale: 0%;
+    animation: 0.5s ease forwards;
+    animation-delay: 1.7s;
+    background: rgba(166, 213, 255, 0.197);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    
+}
+
+@keyframes popup{
+    from{
+        scale: 0%;
+    }
+    to{
+        scale: 100%;
+    }
+}
+
+@keyframes vanish{
+    from{
+        scale: 100%;
+    }
+    to{
+        scale: 0%;
+    }
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+.form h1{
+  color: rgb(5, 0, 139);
+}
+
+.login{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#pass{
+    font-size: 17px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    color: white;
+    animation: 0.5s ease forwards;
+}
+
+@keyframes wrong{
+    0%,40%,80%{
+        padding-left: 5px;
+    }
+    20%,30%,60%,100%{
+        padding-left: 2px;
+    }
+}
+
+::placeholder{
+    color: rgb(220, 219, 219);
+}
+
+.button{
+    padding: 5px 15px;
+    background-color: rgb(0, 140, 255);
+    font-size: 16px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+.button:hover{
+    background-color: rgb(1, 97, 175);
+    scale: 98%;
+    box-shadow: 0 0 5px rgb(1, 97, 175);
+}
+
+/* 2nd page*/
+
+.bg2{
+    width: 0%;
+    animation: 0.5s ease forwards;
+    position: fixed !important;
+}
+
+@keyframes slide{
+    from{
+        width: 0%;
+    }
+
+    to{
+        width: 100%;
+    }
+}
+
+.main2{
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.main{
+    overflow: hidden;
+}
+
+.candle-count-display {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f0e4d0;
+  background-color: #15ccff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #77efff;
+}
+
+.candle-count-display span {
+  font-weight: bold;
+  color: #AD030F;
+}
+
+.cake {
+  position: absolute;
+  width: 250px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -125px;
+}
+
+.plate {
+  width: 270px;
+  height: 110px;
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cake > * {
+  position: absolute;
+}
+
+.layer {
+  position: absolute;
+  display: block;
+  width: 250px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #0074a2;
+  box-shadow: 0 2px 0px #00c8ff, 0 4px 0px #00c8ff, 0 6px 0px #00c8ff, 0 8px 0px #00c8ff, 0 10px 0px #00c8ff, 0 12px 0px #00c8ff, 0 14px 0px #15ccff, 0 16px 0px #15ccff, 0 18px 0px #15ccff, 0 20px 0px #15ccff, 0 22px 0px #15ccff, 0 24px 0px #15ccff, 0 26px 0px #15ccff, 0 28px 0px #15ccff, 0 30px 0px #15ccff;
+}
+
+.layer-top {
+  top: 0px;
+}
+
+.layer-middle {
+  top: 33px;
+}
+
+.layer-bottom {
+  top: 66px;
+}
+
+.icing {
+  top: 2px;
+  left: 5px;
+  background-color: #f0e4d0;
+  width: 240px;
+  height: 90px;
+  border-radius: 50%;
+}
+.icing:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  bottom: 6px;
+  left: 5px;
+  background-color: #f4ebdc;
+  box-shadow: 0 0 4px #f6efe3, 0 0 4px #f6efe3, 0 0 4px #f6efe3;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.drip {
+ display: block;
+  width: 50px;
+  height: 60px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #f0e4d0; 
+}
+
+.drip1 {
+  top: 53px;
+  left: 5px;
+  transform: skewY(15deg);
+  height: 48px;
+  width: 40px;
+}
+
+.drip2 {
+  top: 69px;
+  left: 181px;
+  transform: skewY(-15deg);
+}
+
+.drip3 {
+  top: 54px;
+  left: 90px;
+  width: 80px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.candle {
+  background-color: #0099db;
+  width: 12px;
+  height: 35px;
+  border-radius: 6px/3px;
+  top: -20px;
+  left: 50%;
+  margin-left: -8px;
+  z-index: 10;
+}
+.candle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00598d;
+}
+
+.candle.out .flame {
+  display: none;
+}
+
+.flame {
+  position: absolute;
+  background-color: orange;
+  width: 10px;
+  height: 25px;
+  border-radius: 8px 8px 8px 8px/20px 20px 8px 8px;
+  top: -34px;
+  left: 50%;
+  margin-left: -7.5px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  transform-origin: 50% 90%;
+  animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
+  }
+  25% {
+    transform: skewX(-5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+  50% {
+    transform: skewX(10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
+  }
+  75% {
+    transform: skewX(-10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
+  }
+  100% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+}
+
+.heart {
+    animation: blink 1s linear infinite;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+}
+@keyframes blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#greet{
+  scale: 0%;
+  animation: 0.5s ease forwards;
+  animation-delay: 0.6s;
+}
+
+#cake{
+    scale: 0%;
+    animation: 0.5s ease forwards;
+    z-index: 1;
+}
+
+#ucake > div{
+  /*background-color: rgba(255, 0, 0, 0.318);*/
+  height: 100vh;
+  width: 100%;
+}
+
+#ucake{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  position: absolute;
+  height: 100vh;
+  width: 99%;
+  top: 0;
+  margin: 0 1%;
+}
+
+.guide{
+  background-color: rgba(255, 255, 255, 0.245);
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 15px;
+  border: 2px solid white;
+  color: white;
+  position: relative;
+  top: 200px;
+  scale: 0%;
+  animation: 0.5s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.guide > h2{
+    color: #98e9ff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.guide > ul{
+    list-style-type: decimal;
+}
+
+.guide li{
+        margin-bottom: 5px;
+}
+
+#mess{
+  opacity: 0;
+  animation: 0.5s ease forwards;
+  animation-delay: 2.5s;
+}
+
+.mess>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    position: relative;
+    top: 640px;
+    font-size: 18px;
+
+}
+
+.mess>div>button{
+    background-color: #0099db;
+    border: 1px solid white;
+    padding: 2px 30px;
+    font-size: medium;
+    color: white;
+    border-radius: 10px;
+    outline: 0;
+}
+
+.mess>div>button:hover{
+    scale: 97%;
+    background-color: #0074a2;
+    box-shadow: 0 0 5px black;
+}
+
+#img5{
+  position: fixed;
+  width: 90vh;
+  bottom: -80px;
+  z-index: -1;
+  scale: 0%;
+  animation: 0.3s ease forwards;
+  animation-delay: 1.5s;
+}
+
+#mc{
+  position: absolute;
+  width: 90%;
+  max-width: 550px;
+  height: 95vh;
+  background-color: rgba(124, 198, 255, 0.826);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 30px;
+  border: 4px dashed rgb(45, 133, 255);
+  overflow-y: scroll;
+  animation: 0.5s ease forwards;
+  scale: 0%;
+  animation-delay: 1.5s;
+  animation: 0.5s ease forwards;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+#mc p{
+  text-align: left;
+  margin: 50px;
+  font-size: 17px;
+}
+
+#mc p button{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3px 10px;
+  background-color: white;
+  outline: none;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+#mc p button:hover{
+  box-shadow: 0 0 5px black;
+}
+
+#vid > div{
+  height: 100vh;
+}
+
+#her{
+  width: 100%;
+  max-width: 300px;
+  min-width: 100px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  box-shadow: 1px 1px 15px black;
+  opacity: 0;
+  animation: 0.5s ease forwards;
+  animation-delay: 2.2s;
+
+}
+
